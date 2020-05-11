@@ -16,15 +16,27 @@ public class Ball : MonoBehaviour {
     // Cached component references
     AudioSource myAudioSource;
     Rigidbody2D myRigidBody2D;
+ 
+    // debut
+    public Transform paddle;
+    // fin
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
         paddleToBallVector = transform.position - paddle1.transform.position;
         myAudioSource = GetComponent<AudioSource>();
         myRigidBody2D = GetComponent<Rigidbody2D>();
 	}
+
+    //debut
+    public void restart()
+    {
+        transform.position = paddle.position;
+    }
+    //fin
 	
+  
 	// Update is called once per frame
 	void Update ()
     {

@@ -12,6 +12,7 @@ public class Block : MonoBehaviour {
     
     // cached reference
     Level level;
+    public GameManager gm;
 
     // state variables
     [SerializeField] int timesHit;  // TODO only serialized for debug purposes
@@ -34,6 +35,7 @@ public class Block : MonoBehaviour {
     {
         if (tag == "Breakable")
         {
+            gm.UpdateScores(10);
             HandleHit();
         }
     }
@@ -44,6 +46,7 @@ public class Block : MonoBehaviour {
         int maxHits = hitSprites.Length + 1;
         if (timesHit >= maxHits)
         {
+            
             DestroyBlock();
         }
         else
