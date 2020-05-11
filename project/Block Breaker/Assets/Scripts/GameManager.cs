@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
             ScoreText.text = "Score : " + score;
         }
         if (MeilleurScoreText != null)
-            MeilleurScoreText.text = "Meilleur Score : " + meilleurScore;
+            MeilleurScoreText.text = "Best Score : " + meilleurScore;
 
     }
 
